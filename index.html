@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/database.js"></script>
+    <script defer src="./js/index.js"></script>
+    <link
+      rel="shortcut icon"
+      href="./img/WearTake Favicon.png"
+      type="image/x-icon"
+    />
+    <title>Weartake - Roupas & Acessórios</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="cabecalho">
+        <div class="cabecalho box">
+          <figure id="wt-logo">
+            <img src="./img/WearTake.png" alt="WearTake Logo" />
+          </figure>
+
+          <nav class="categories">
+            <ul class="categories items">
+              <li class="categories item">
+                <button class="filter-btn">Todos</button>
+              </li>
+              <li class="categories item">
+                <button class="filter-btn">Acessórios</button>
+              </li>
+              <li class="categories item">
+                <button class="filter-btn">Calçados</button>
+              </li>
+              <li class="categories item">
+                <button class="filter-btn">Camisetas</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="principal-box">
+        <aside class="cart-pesquisa-box">
+          <form action="" class="pesquisa">
+            <input
+              type="text"
+              name="pesquisa"
+              placeholder="Digite aqui sua pesquisa"
+              id="pesquisar"
+            />
+            <button type="button" id="btnPesquisar" title="Pesquisar">
+              Pesquisar
+            </button>
+          </form>
+
+          <div class="carrinho">
+            <div class="carrinho titulo">
+              <p>Carrinho de compras</p>
+            </div>
+
+            <div class="cartbox">
+              <div class="carrinhoVazio">
+                <p id="cart-empty-text">Carrinho vázio</p>
+                <p id="add-cart-text">Adicione mais itens</p>
+              </div>
+
+              <ul class="cartList esconder"></ul>
+            </div>
+            <div class="totalPrice esconder">
+              <div class="totalPrice qtdtotal">
+                <p>Quantidade:</p>
+                <span></span>
+              </div>
+              <div class="totalPrice pricetotal">
+                <p>Preço:</p>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="cardsBox">
+          <ul class="cards"></ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
