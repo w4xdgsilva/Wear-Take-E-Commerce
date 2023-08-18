@@ -13,17 +13,31 @@
   <body>
     <header>
       <nav class="header__nav container">
-        <button id="themeBtn" class="btnIcon" type="button" title="Tema">
-          <i class="fa-regular fa-moon fa-fade fa-2xl"></i>
-          <!-- <i class="fa-regular fa-sun fa-spin-pulse fa-2xl" style="color: #262626;"></i> -->
-        </button>
-        <h1 class="header__logo p__title--1">WearTake</h1>
-
-        <ul class="header__categories">
+        <ul class="header__categories--sidepanel">
           <li class="header__category p__title--1">Todos</li>
           <li class="header__category p__title--1">Acessórios</li>
           <li class="header__category p__title--1">Calçados</li>
           <li class="header__category p__title--1">Camisetas</li>
+        </ul>
+        <button class="themeBtn__mobile btnIcon" type="button" title="Tema">
+          <i class="fa-regular fa-moon fa-fade fa-2xl"></i>
+        </button>
+        <h1 class="header__logo txt__title--2">WearTake</h1>
+
+        <ul class="header__categories">
+          <li>
+            <button
+              class="themeBtn__desktop btnIcon"
+              type="button"
+              title="Tema"
+            >
+              <i class="fa-regular fa-moon fa-fade fa-2xl"></i>
+            </button>
+          </li>
+          <li class="header__category txt__title--1">Todos</li>
+          <li class="header__category txt__title--1">Acessórios</li>
+          <li class="header__category txt__title--1">Calçados</li>
+          <li class="header__category txt__title--1">Camisetas</li>
         </ul>
         <button title="menu" id="menuMobile" class="header__menu-mobile">
           <i class="fa-solid fa-bars fa-2xl"></i>

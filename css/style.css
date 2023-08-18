@@ -42,24 +42,38 @@ body {
   margin: 0 auto;
 }
 
-.p__title--1,
-.p__title--2,
-.p__title--3 {
+.txt__title--1,
+.txt__title--2,
+.txt__title--3 {
   color: var(--grey-100);
+  font-weight: bold;
 }
 
-button {
+.txt__title--1 button,
+.txt__title--2 button,
+.txt__title--3 button {
   cursor: pointer;
+}
+
+.txt__title--1 {
+  font-size: var(--title-1);
 }
 
 .btnIcon,
 .header__menu-mobile {
-  display: none;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   width: 55px;
   height: 55px;
+}
+
+.themeBtn__mobile {
+  display: none;
+}
+
+.header__menu-mobile {
+  display: none;
 }
 
 .btnIcon:hover {
@@ -71,8 +85,8 @@ button {
 }
 
 @media (max-width: 769px) {
-  .btnIcon,
-  .header__menu-mobile {
+  .header__menu-mobile,
+  .themeBtn__mobile {
     display: flex;
   }
 }
