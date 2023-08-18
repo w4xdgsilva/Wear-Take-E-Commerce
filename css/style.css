@@ -78,7 +78,8 @@ body {
 
 .txt__title--1 button,
 .txt__title--2 button,
-.txt__title--3 button {
+.txt__title--3 button,
+.btnIcon {
   cursor: pointer;
 }
 
