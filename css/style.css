@@ -45,18 +45,41 @@ body {
 .txt__title--1,
 .txt__title--2,
 .txt__title--3 {
-  color: var(--grey-100);
   font-weight: bold;
+}
+
+.txt__title--1,
+.txt__title--2,
+.txt__title--3,
+.txt__text--1,
+.txt__text--2,
+.txt__text--3 {
+  color: var(--grey-100);
+}
+
+.txt__title--1 {
+  font-size: var(--title-1);
+}
+.txt__title--2 {
+  font-size: var(--title-2);
+}
+.txt__title--3 {
+  font-size: var(--title-3);
+}
+.txt__text--1 {
+  font-size: var(--text-1);
+}
+.txt__text--2 {
+  font-size: var(--text-2);
+}
+.txt__text--3 {
+  font-size: var(--text-3);
 }
 
 .txt__title--1 button,
 .txt__title--2 button,
 .txt__title--3 button {
   cursor: pointer;
-}
-
-.txt__title--1 {
-  font-size: var(--title-1);
 }
 
 .btnIcon,
