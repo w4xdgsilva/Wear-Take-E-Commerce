@@ -107,5 +107,75 @@ function themeMode() {
   });
 }
 
+function renderProducts(products) {
+  const productsList = document.querySelector("#productsId");
+
+  products.forEach((product) => {
+    const productItem = createProductItem(product);
+
+    productsList.appendChild(productItem);
+  });
+}
+
+function createProductItem(product) {
+  const productItem = document.createElement("div");
+  productItem.classList.add("product-item__container");
+
+  const productImage = document.createElement("img");
+  productImage.classList.add("product-item__image");
+  productImage.src = product.img;
+  productImage.alt = product.nameItem;
+
+  const productsTag = document.createElement("div");
+  productsTag.classList.add("products-tags");
+
+  product.tag.slice(0, 2).forEach((tag) => {
+    const productTag = document.createElement("span");
+    productTag.textContent = tag;
+
+    productsTag.appendChild(productTag);
+  });
+
+  if (product.tag.length > 2) {
+    const remainingTags = product.tag.length - 2;
+
+    const remainingTagsSpan = document.createElement("span");
+    remainingTagsSpan.textContent = `+${remainingTags}`;
+
+    remainingTagsSpan.title = product.tag.slice(2).join(", ");
+
+    productsTag.appendChild(remainingTagsSpan);
+  }
+
+  const productName = document.createElement("h2");
+  productName.textContent = product.nameItem;
+
+  const productDescription = document.createElement("p");
+  productDescription.textContent = product.description;
+
+  const productPrice = document.createElement("p");
+  const currency = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+
+  productPrice.textContent = currency.format(product.value);
+
+  const productAddToCartButton = document.createElement("button");
+  productAddToCartButton.textContent = product.addCart;
+
+  productItem.append(
+    productImage,
+    productsTag,
+    productName,
+    productDescription,
+    productPrice,
+    productAddToCartButton
+  );
+
+  return productItem;
+}
+
+renderProducts(data);
 themeMode();
 mobileMenu();
