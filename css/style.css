@@ -2,6 +2,8 @@
 
 @import url(reset.css);
 @import url(header.css);
+@import url(main.css);
+@import url(cards.css);
 
 :root {
   --primary-color: #2e245e;
@@ -55,6 +57,7 @@ body {
 .txt__text--2,
 .txt__text--3 {
   color: var(--grey-100);
+  line-height: 24px;
 }
 
 .txt__title--1 {
@@ -117,6 +120,7 @@ body {
 
 @media (max-width: 1220px) {
   .container {
-    padding: 0 5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
