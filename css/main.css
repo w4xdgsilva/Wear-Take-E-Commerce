@@ -69,7 +69,11 @@
   all: unset;
   height: 50px;
   background-color: var(--grey-0);
+  color: var(--grey-100);
   padding: 0 .875rem;
+}
+.product__input-search::placeholder {
+  color: var(--grey-100);
 }
 
 .product__input-btn {
@@ -78,6 +82,8 @@
   color: #fff;
   padding: 0 .6875rem;
   margin: 0;
+  border: none;
+  outline: none;
 }
 
 @media (max-width: 769px) {

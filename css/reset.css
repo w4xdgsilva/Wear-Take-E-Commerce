@@ -132,6 +132,7 @@ table {
 button {
   cursor: pointer;
   border: none;
+  outline: none;
   margin: 0;
   padding: 0;
   width: auto;
@@ -151,7 +152,7 @@ button {
   appearance: none;
 }
 
-button::-moz-focus-inner, input[type="button"]::-moz-focus-inner {
+button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
