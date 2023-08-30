@@ -14,10 +14,10 @@
     <header>
       <nav class="header__nav container">
         <ul class="header__categories--sidepanel">
-          <li class="header__category p__title--1">Todos</li>
-          <li class="header__category p__title--1">Acessórios</li>
-          <li class="header__category p__title--1">Calçados</li>
-          <li class="header__category p__title--1">Camisetas</li>
+          <li class="header__category txt__text--1">Todos</li>
+          <li class="header__category txt__text--1">Acessórios</li>
+          <li class="header__category txt__text--1">Calçados</li>
+          <li class="header__category txt__text--1">Camisetas</li>
         </ul>
         <button class="themeBtn__mobile btnIcon" type="button" title="Tema">
           <i class="fa-regular fa-moon fa-fade fa-2xl"></i>
@@ -48,7 +48,23 @@
       <section>
         <ul id="productsId"></ul>
       </section>
-      <aside></aside>
+      <aside class="products__aside">
+        <div class="products__aside-box">
+          <div class="products__search">
+            <input class="product__input-search" title="Digite sua pesquisa" type="text" placeholder="Digite aqui sua pesquisa" />
+            <input class="product__input-btn" title="Pesquisar" type="button" value="Pesquisar" />
+          </div>
+          <div class="products__cart">
+            <div class="products__cart-top">
+              <p class="txt__title--3">Carrinho de compras</p>
+            </div>
+            <div class="products__cart-content">
+              <p class="txt__title--2">Carrinho Vázio</p>
+              <p class="txt__text--3">Adicione Itens</p>
+            </div>
+          </div>
+        </div>
+      </aside>
     </main>
     <script src="/js/index.js" type="module"></script>
   </body>
