@@ -1,0 +1,8 @@
+#productsId {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 2.5rem;
+  row-gap: 1.375rem;
+}
