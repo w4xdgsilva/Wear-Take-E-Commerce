@@ -179,6 +179,7 @@ function createProductItem(product) {
   const productAddToCartButton = document.createElement("button");
   productAddToCartButton.textContent = product.addCart;
   productAddToCartButton.classList = "txt__text--3";
+  productAddToCartButton.id = "addToCartBtn";
 
   productItem.append(
     productImageContainer,
