@@ -118,16 +118,22 @@ function renderProducts(products) {
 }
 
 function createProductItem(product) {
-  const productItem = document.createElement("div");
+  const productItem = document.createElement("li");
   productItem.classList.add("product-item__container");
+
+  const productImageContainer = document.createElement("figure");
+  productImageContainer.classList = "product-item__image-container";
 
   const productImage = document.createElement("img");
   productImage.classList.add("product-item__image");
   productImage.src = product.img;
   productImage.alt = product.nameItem;
 
+  const productDescContainer = document.createElement("div");
+  productDescContainer.classList = "product-desc__container";
+
   const productsTag = document.createElement("div");
-  productsTag.classList.add("products-tags");
+  productsTag.classList = "products-tags txt__text--3";
 
   product.tag.slice(0, 2).forEach((tag) => {
     const productTag = document.createElement("span");
@@ -149,23 +155,44 @@ function createProductItem(product) {
 
   const productName = document.createElement("h2");
   productName.textContent = product.nameItem;
+  productName.classList = "txt__title--3";
 
   const productDescription = document.createElement("p");
   productDescription.textContent = product.description;
+  productDescription.classList = "txt__text--3";
+
+  if (productDescription.textContent.length > 90) {
+    productDescription.textContent =
+      productDescription.textContent.substring(0, 90) + "...";
+    productDescription.title = product.description;
+  }
 
   const productPrice = document.createElement("p");
   const currency = new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
   });
+  productPrice.classList = "txt__text--3";
 
   productPrice.textContent = currency.format(product.value);
 
   const productAddToCartButton = document.createElement("button");
   productAddToCartButton.textContent = product.addCart;
+  productAddToCartButton.classList = "txt__text--3";
 
   productItem.append(
+    productImageContainer,
+    productDescContainer,
     productImage,
+    productsTag,
+    productName,
+    productDescription,
+    productPrice,
+    productAddToCartButton
+  );
+
+  productImageContainer.appendChild(productImage);
+  productDescContainer.append(
     productsTag,
     productName,
     productDescription,
