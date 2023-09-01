@@ -94,3 +94,9 @@ header {
     display: flex;
   }
 }
+
+@media (max-height: 398px) {
+  .header__categories--sidepanel {
+    height: 60%;
+  }
+}
